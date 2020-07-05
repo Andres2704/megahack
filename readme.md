@@ -45,8 +45,8 @@ Utilizada para inserir os métodos do cliente
 
 ### Funções extras 
 
-##### def pedidos:
-Pode ser utilizada futuramente para dar início a um e-commerce
+##### def pedidos: e def ListarPedidos:
+Podem ser utilizada futuramente para dar início a um e-commerce
 
 
 
