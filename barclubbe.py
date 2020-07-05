@@ -156,7 +156,7 @@ class bar():
         #self.eventosdoBar = json.dumps(self.eventosBar) #LISTA DOS EVENTOS QUE O BAR POSSUI QUANDO ESTE ESTÁ LOGADO
         return eventosBar
  
-class tchola():
+class user():
 
     def conexao(self):
         try:
@@ -332,7 +332,7 @@ def home():
 ###INSIGNIAS----------------------------------------------------------------
 @app.route('/api/usuario/insignia/all', methods=['GET'])
 def api_all_insignia():
-    return jsonify(tchola().ListarInsignias())
+    return jsonify(user().ListarInsignias())
 @app.route('/api/usuario/insignia', methods=['GET'])
 def api_id_insignia():
     if 'id' in request.args:
@@ -340,7 +340,7 @@ def api_id_insignia():
     else:
         return "Error: No id field provided. Please specify an id."
     results = []
-    for insignia in tchola().ListarInsignias(): #TESTAR
+    for insignia in user().ListarInsignias(): #TESTAR
         if insignia['idInsignea'] == id:
             results.append(insignia)
     return jsonify(results)
@@ -351,9 +351,9 @@ def api_id_insignia_cliente():
     else:
         return "Error: No id field provided. Please specify an id."
     results = []
-    for insignia in tchola().ListarConquistas(): #TESTAR
+    for insignia in user().ListarConquistas(): #TESTAR
         if insignia['idCliente'] == idcliente:
-            results.append(tchola().ListarConquistas(insignia['idInsignea']))
+            results.append(user().ListarConquistas(insignia['idInsignea']))
     return jsonify(results)'''
 ###FAVORITOS----------------------------------------------------------------
 @app.route('/api/usuario/favoritos', methods=['GET'])
@@ -362,7 +362,7 @@ def api_id_favoritos():
         idcliente = int(request.args['idCliente'])
     else:
         return "Error: No id field provided. Please specify an id."
-    return jsonify(tchola().ListarFavoritos(idcliente))
+    return jsonify(user().ListarFavoritos(idcliente))
 ###COLEÇAO------------------------------------------------------------------
 @app.route('/api/usuario/colecao', methods=['GET'])
 def api_id_colecao():
@@ -370,7 +370,7 @@ def api_id_colecao():
         idcliente = int(request.args['idCliente'])
     else:
         return "Error: No id field provided. Please specify an id."
-    return jsonify(tchola().ListarColecao(idcliente))
+    return jsonify(user().ListarColecao(idcliente))
 ###REVIEWS------------------------------------------------------------------
 @app.route('/api/bar/review', methods=['GET'])
 def api_all_review():
@@ -417,11 +417,11 @@ def api_ADD_review():
     else:  
         return "Error: missing fields on request."
     
-    return jsonify(tchola().AddReview(idbar,idCliente,review,num_estrelas))
+    return jsonify(user().AddReview(idbar,idCliente,review,num_estrelas))
 ###CERVEJAS-----------------------------------------------------------------
 @app.route('/api/usuario/cervejas/all', methods=['GET'])
 def api_all_cerveja():
-    return jsonify(tchola().ListarCervejas())
+    return jsonify(user().ListarCervejas())
 @app.route('/api/usuario/cervejas', methods=['GET'])
 def api_id_cerveja():
     if 'id' in request.args:
@@ -430,7 +430,7 @@ def api_id_cerveja():
         return "Error: No id field provided. Please specify an id."
 
     results = []
-    for cerveja in tchola().ListarCervejas():
+    for cerveja in user().ListarCervejas():
         print(cerveja)
         if cerveja['idCerveja'] == id:
             results.append(cerveja)
@@ -444,7 +444,7 @@ def api_all_produto():
     else:
         return "Error: No idBar field provided. Please specify an id."
 
-    return jsonify(tchola().ListarProdutos(idBar))
+    return jsonify(user().ListarProdutos(idBar))
 @app.route('/api/usuario/produtos', methods=['GET'])
 def api_id_produto():
     if 'idBar' and 'id' in request.args:
@@ -454,7 +454,7 @@ def api_id_produto():
         return "Error: No id field provided. Please specify an id."
 
     results = []
-    for produto in tchola().ListarProdutos(idBar): #TESTAR
+    for produto in user().ListarProdutos(idBar): #TESTAR
         print(produto)
         if produto['idProduto'] == id:
             results.append(produto)
@@ -467,7 +467,7 @@ def api_all_eventos():
     else:
         return "Error: No idBar field provided. Please specify an id."
 
-    return jsonify(tchola().ListarEventos(idBar))
+    return jsonify(user().ListarEventos(idBar))
 @app.route('/api/usuario/eventos', methods=['GET'])
 def api_id_eventos():
     if 'idBar' and 'id' in request.args:
@@ -477,7 +477,7 @@ def api_id_eventos():
         return "Error: No id field provided. Please specify an id."
 
     results = []
-    for eventos in tchola().ListarEventos(idBar):
+    for eventos in user().ListarEventos(idBar):
         print(eventos)
         if eventos['idEvento'] == id:
             results.append(eventos)
@@ -486,7 +486,7 @@ def api_id_eventos():
 ###BARES--------------------------------------------------------------------
 @app.route('/api/usuario/bares/all', methods=['GET'])
 def api_all_bares():
-    return jsonify(tchola().Listarbar())
+    return jsonify(user().Listarbar())
 @app.route('/api/usuario/bares', methods=['GET'])
 def api_id_bares():
     if 'id' in request.args:
@@ -495,7 +495,7 @@ def api_id_bares():
         return "Error: No id field provided. Please specify an id."
 
     results = []
-    for bar in tchola().Listarbar():
+    for bar in user().Listarbar():
         print(bar)
         if bar['idBar'] == id:
             results.append(bar)
@@ -510,7 +510,7 @@ def api_autenticar_usuario():
     else:
         return "Error: No strEmail or strSenha field provided. Please specify an id."
 
-    return jsonify(tchola().VerificaLogin(email,senha))
+    return jsonify(user().VerificaLogin(email,senha))
 ###AUTENTICAÇÃO BAR---------------------------------------------------------
 @app.route('/api/bar/autenticar', methods=['GET'])
 def api_autenticar_bar():
@@ -529,7 +529,7 @@ def api_verificar_email_usuario():
     else:
         return "Error: No strEmail or field provided. Please specify an email."
 
-    return jsonify(tchola().VerificarEmail(email))
+    return jsonify(user().VerificarEmail(email))
 @app.route('/api/usuario/cadastrar', methods=['GET'])
 def api_cadastrar_usuario():
     if 'strEmail' and 'strSenha' and  'strNome' and 'intPersona' and 'strEndereco' in request.args:
@@ -541,7 +541,7 @@ def api_cadastrar_usuario():
     else:  
         return "Error: missing fields on request."
     
-    return jsonify(tchola().CadastrarUsuario(email,senha,nome,persona,endereco))
+    return jsonify(user().CadastrarUsuario(email,senha,nome,persona,endereco))
 @app.route('/api/bar/cadastrar/email', methods=['GET'])
 def api_verificar_email_bar():
     if 'strEmail' in request.args:
@@ -566,7 +566,7 @@ def api_cadastrar_bar():
     return jsonify(bar().CadastrarBar(email,senha,nome,CNPJ,endereco,logo))
 @app.route('/api/conexao', methods=['GET'])
 def api_conexao():    
-    return jsonify(tchola().conexao())
+    return jsonify(user().conexao())
 ###CADASTRAR----------------------------------------------------------------
 
 if __name__ == "__main__":
