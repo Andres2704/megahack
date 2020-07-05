@@ -39,7 +39,7 @@
 ### Funções extras 
 
 ##### def pedidos:
-###### Pode ser utilizada futuramente para dar início a um e-commerce
+Pode ser utilizada futuramente para dar início a um e-commerce
 
 
 
