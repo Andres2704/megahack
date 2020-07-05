@@ -1,9 +1,9 @@
-## **BarClub back-end in Python by:**
+## **BarClub back-end em Python por:**
 ### *Luis Felipe Pessoa Teixeira - luis.eletroeletronica@gmail.com*
 ### *Andres Benoit - andres.benoit7@gmail.com*
 =============================================
 
-### Blbliotecas utilizadas
+### Bibliotecas utilizadas
 - PyMysql - Para fazer a comunicação com o banco de dados
 - JSON - Para retornar Json files na API
 - Flask - Framework para a API
@@ -14,7 +14,7 @@
 2. Cerveja Específica - https://muammuam.herokuapp.com/api/usuario/cervejas?id=
 3. Lista de bares - https://muammuam.herokuapp.com/api/usuario/bares/all
 4. Produtos do Bar - https://muammuam.herokuapp.com/api/usuario/produtos/all?idBar=
-5. Produto específico - https://muammuam.herokuapp.com/api/usuario/produtos?idBar=&id=(id do Produto)
+5. Produto específico - https://muammuam.herokuapp.com/api/usuario/produtos?idBar=&id=
 6. Eventos do Bar - https://muammuam.herokuapp.com/api/usuario/eventos/all?idBar=
 7. Evento específico - https://muammuam.herokuapp.com/api/usuario/eventos?idBar=&id=
 7. Dados do bar - https://muammuam.herokuapp.com/api/usuario/bares?id
@@ -24,15 +24,16 @@
 12. Veriricar a existência do email do Bar - https://muammuam.herokuapp.com/api/bar/cadastrar/email?strEmail=
 13. Cadastrar Usuário - https://muammuam.herokuapp.com/api/usuario/cadastrar?strEmail=&strSenha=&strNome=&intPersona=&strEndereco=
 14. Cadastrar Bar - https://muammuam.herokuapp.com/api/bar/cadastrar?strNome=&strEndereco=&strEmail=&strSenha=&intCNPJ=&strLogo=
-15. Lista de insigneas - https://muammuam.herokuapp.com/api/usuario/insignia/all
-16. Retornar uma insignea - https://muammuam.herokuapp.com/api/usuario/insignia?id=
+15. Lista de insígnias - https://muammuam.herokuapp.com/api/usuario/insignia/all
+16. Retornar uma insígnias - https://muammuam.herokuapp.com/api/usuario/insignia?id=
 17. Retornar os favoritos do cliente - https://muammuam.herokuapp.com/api/usuario/favoritos?idCliente=
 18. Retornar a coleção do cliente - https://muammuam.herokuapp.com/api/usuario/colecao?idCliente=
 19. Retornar a classificação do bar - https://muammuam.herokuapp.com/api/bar/review?idBar=
-20. Adicionar um produto do bar - https://muammuam.herokuapp.com/api/bar/add/produto?idBar=&strTitulo=&strDescricao=&dblPreco=&intTipo=&strFoto=
+20. Adicionar um produto ao bar - https://muammuam.herokuapp.com/api/bar/add/produto?idBar=&strTitulo=&strDescricao=&dblPreco=&intTipo=&strFoto=
 21. Adicionar um evento ao bar - https://muammuam.herokuapp.com/api/bar/add/evento?idBar=&strTitulo=&strDescricao=&strFoto=&dtData=
 22. Adicionar uma classificação ao bar - https://muammuam.herokuapp.com/api/usuario/add/review?idBar=&idCliente=&strReview=&intEstrelas=
 
+==========================================================================================================
 
 
 
