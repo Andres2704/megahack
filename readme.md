@@ -33,7 +33,13 @@
 21. Adicionar um evento ao bar - https://muammuam.herokuapp.com/api/bar/add/evento?idBar=&strTitulo=&strDescricao=&strFoto=&dtData=
 22. Adicionar uma classificação ao bar - https://muammuam.herokuapp.com/api/usuario/add/review?idBar=&idCliente=&strReview=&intEstrelas=
 
-==========================================================================================================
+
+=============================================
+
+### Funções extras 
+
+##### def pedidos:
+###### Pode ser utilizada futuramente para dar início a um e-commerce
 
 
 
