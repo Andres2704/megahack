@@ -33,6 +33,13 @@
 21. Adicionar um evento ao bar - https://muammuam.herokuapp.com/api/bar/add/evento?idBar=&strTitulo=&strDescricao=&strFoto=&dtData=
 22. Adicionar uma classificação ao bar - https://muammuam.herokuapp.com/api/usuario/add/review?idBar=&idCliente=&strReview=&intEstrelas=
 
+=============================================
+
+### Classes desenvolvidas
+#### class bar():
+Utilizada para inserir os métodos do bar
+#### class tchola():
+Utilizada para inserir os métodos do cliente
 
 =============================================
 
