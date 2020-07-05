@@ -38,7 +38,7 @@
 ### Classes desenvolvidas
 #### class bar():
 Utilizada para inserir os métodos do bar
-#### class tchola():
+#### class user():
 Utilizada para inserir os métodos do cliente
 
 =============================================
