@@ -235,11 +235,11 @@ class user():
             return('erro ao fazer a consulta no banco de dados bdCerveja')
 
         return cervejas #DADOS DAS CERVEJAS AQUI FIA DA PUTA te fode vagabundo
-    def Listarbar(self):
+   def Listarbar(self):
         self.conexao()
         try:
             with self.banco.cursor() as self.cursor:
-                self.cursor.execute('select * from bdbar')
+                self.cursor.execute('select idBar, intCNPJ, strEmail, strEndereco, strLogo, strNome from bdbar')
                 bares = self.cursor.fetchall()
         except:
             print('erro ao fazer a consulta - bdbar') 
