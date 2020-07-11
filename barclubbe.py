@@ -15,7 +15,7 @@ class bar():
                 cursorclass = pymysql.cursors.DictCursor
             )
         except:
-            return('erro ao conectar com o bd e pisa mole ')    
+            return('erro ao conectar com o bd')    
 
     def VerificaLoginBar(self,usuario,senha):#OK
         self.conexao()
